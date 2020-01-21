@@ -1,0 +1,14 @@
+<h1>{{ title }}</h1>
+<button (click) = "getloc()">getCo-ordinates</button><br>
+<h2>{{latitude}}
+{{longitude}}
+<br>{{crt}}</h2>
+<button (click) = "display()">display</button>
+<div *ngIf=show >
+<agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)=ontouched($event)>
+  <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+</agm-map>
+</div>
+<!-- <ng-template #block>
+  <h2> map is loading</h2>
+</ng-template> -->
